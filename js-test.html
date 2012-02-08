@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+    <title>Test</title>
+    <script type="text/javascript" src="DOMination.js"></script>
+</head>
+<body>
+    <p class="c1">Para 1</p>
+    <p class="c1">Para 2</p>
+    <h2 id="id1">Subheader</h2>
+    <div id="parent">
+        <h1>Descends</h1>
+    </div>
+    <h1>Does not descend</h1>
+    <script type="text/javascript">
+    window.onload = function() {
+    dd.each(grab(".c1"), function(i, el) {
+        dd.register(el, 'click', function() {
+            alert(el.textContent);
+        });
+    });
+    };
+    </script>
+</body>

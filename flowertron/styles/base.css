@@ -1,0 +1,172 @@
+/* Colors
+ * light -  #E8DDCB
+ * tan -    #CDB380
+ * aqua -   #036564
+ * daqua -  #033649
+ * blue -   #031634
+ */
+
+/* Base Styles */
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: #E8DDCB;
+    color: #031634;
+}
+
+#wrap {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 20px;
+}
+
+a {
+    color: #036564;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #033649;
+    text-decoration: underline;
+}
+
+/* Specific Styles */
+header {
+    position: relative;
+    background-color: #031634;
+    padding: 10px;
+    border-radius: 20px;
+    height: ;
+}
+
+/* Uncomment to move header to bottom of page */
+/*header {
+    position: absolute;
+    width: 750px;
+    bottom: 150px;
+}
+*/
+header h1 {
+    font-family: "Open Sans";
+    font-size: 60px;
+    line-height: 60px;
+    margin: 0px;
+    color: #CDB380;
+    text-shadow: 5px -5px #E8DDCB,
+    4px -4px #E8DDCB,
+    3px -3px #E8DDCB,
+    2px -2px #E8DDCB,
+    1px -1px #E8DDCB;
+}
+
+header h1 span {
+    font-family: "Vollkorn";
+    font-style: italic;
+    font-size: 48px;
+}
+
+header h2 {
+    font-family: "Open Sans";
+    font-size: 20px;
+    color: #E8DDCB;
+    line-height: 20px;
+    margin: 0px;
+    position: relative;
+    top: -4px;
+    left: 5px;
+}
+
+#meta-nav {
+    margin-right: 10px;
+    float: right;
+    position: absolute;
+    right: 5px;
+    bottom: 15px;
+}
+
+#meta-nav a {
+    padding: 3px 6px 2px 6px;
+    margin: 0 5px;
+    background-color: #E8DDCB;
+    border-radius: 5px;
+}
+
+#meta-nav a:hover {
+    background-color: #CDB380;
+}
+
+#sidebar {
+    float: left;
+    width: 100px;
+    height: 100%;
+    padding: 10px 5px;
+}
+
+#site-nav {
+    width: 73px;
+}
+
+#site-nav a {
+    display: block;
+    padding: 5px 5px 4px 5px;
+    margin: 8px 0px;
+    background-color: #CDB380;
+    border-radius: 5px;
+}
+
+#main {
+    float: right;
+    max-width: 630px;
+}
+
+h1.small-header {
+    font-size: 20px;
+    line-height: 20px;
+    margin: 18px 0 0 0;
+    padding: 0;
+}
+
+section.blurb {
+    height: 200px;
+}
+
+section.blurb p {
+    margin-top: 5px;
+}
+
+section.blurb img {
+    height: 200px;
+    float: left;
+    margin: 0 10px 0 0;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px dashed #033649;
+}
+
+section.login {
+    clear: both;
+    padding: 5px;
+    margin-top: 30px;
+    border: 1px dashed #033649;
+    border-radius: 5px;
+}
+
+section.login h1.small-header {
+    margin: 0;
+}
+
+footer {
+    position: relative;
+    top: 15px;
+    clear: both;
+    text-align: center;
+    font-size: 14px;
+}
+
+#footer-nav a {
+    margin: 0 5px;
+}
+
+footer p {
+    margin: 0;
+}
