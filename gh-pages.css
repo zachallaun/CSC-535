@@ -1,8 +1,12 @@
 body {
     font-family: Helvetica, sans-serif;
-    max-width: 600px;
+    max-width: 650px;
     margin-left: auto;
     margin-right: auto;
+}
+
+div.wrap {
+    margin: 10px;
     padding: 20px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -10,10 +14,11 @@ body {
     border: 1px solid #DDD;
 }
 
-h1 {
+div.wrap h1 {
     font-size: 26px;
+    padding: 0;
     margin-bottom: 0;
-    line-height: 10px;
+    line-height: 22px;
 }
 
 h2.sub {
@@ -24,7 +29,7 @@ h2.sub {
     line-height: 16px;
     margin-left: 2px;
     margin-bottom: 2px;
-    margin-top: 6px;
+    margin-top: 0px;
 }
 
 header {
@@ -36,7 +41,7 @@ div.sec {
     padding-top: 10px;
 }
 
-div h1 {
+div.sec h1 {
     font-size: 20px;
     line-height: 5px;
 }
