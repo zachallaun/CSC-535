@@ -9,17 +9,22 @@ var dd = {
     // Implements very basic css-like selection
     // Ex. grab("#id") returns a single nodeElement
     // Ex. grab(".class") returns a list of elements with class "class"
-    grab: function (selector) {
+    // Pass true to optional argument single to return a single element; in 
+    // the case of a list, the first element
+    grab: function (selector, single) {
         var identifier = selector[0],
-            sel = selector.slice(1);
+            sel = selector.slice(1),
+            nodeEle;
         
         if (identifier == ".") {
-            return document.getElementsByClassName(sel);
+            nodeEle = document.getElementsByClassName(sel);
         } else if (identifier == "#") {
-            return document.getElementById(sel);
+            nodeEle = document.getElementById(sel);
         } else {
-            return document.getElementsByTagName(selector);
+            nodeEle = document.getElementsByTagName(selector);
         }   
+
+        return (single && nodeEle instanceof Array) ? nodeEle[0] : nodeEle;
     },
 
     // Returns true if descendant descends from anscestor, otherwise false
