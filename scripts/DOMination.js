@@ -69,8 +69,8 @@ var dd = {
     // Accepts an array and a function, and calls the function for each
     // (index, value) of the array
     each: function (array, fn) {
-        for (var i = 0; i < array.length; i++) {
-            fn(i, array[i]);
+        for (var i = 0, element; element = array[i++]) {
+            fn(i, element);
         }
     }
 
