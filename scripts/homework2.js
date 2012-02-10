@@ -39,6 +39,7 @@ var isPalindrome = function(n) {
     return n.toString() === n.toString().split("").reverse().join("");
 }
 
+// No longer used
 var arrayMax = function(array) {
     // Returns the maximum value in array
     var max = array[0];
@@ -53,13 +54,13 @@ var arrayMax = function(array) {
 var largestPalindrome = function(a, b) {
     // Accepts two values, a and b, and returns the largest palindrome
     // created from some (x * y) such that x <= a and y <= b
-    var palindromes = [];
+    var palindromes = [],
+        largest = 0;
 
     for (var i = a; i > 0; i--) {
         for (var j = b; j > 0; j--) {
-            if (isPalindrome(i * j)) {
-                palindromes.push(i * j);
-                sum += j;
+            if (i * j > largest && isPalindrome(i * j)) {
+                largest = i * j;
                 // If i * j is a palindrome, break from the j-for, decrementing i.
                 // There is no need to find further palindromes for that value of i,
                 // as they cannot be larger than what we've already found. 
@@ -69,10 +70,7 @@ var largestPalindrome = function(a, b) {
         }
     }
 
-    // My version, so you know I can do it:
-    // return arrayMax(palindromes);
-    // The builtin:
-    return Math.max.apply(Math, palindromes);
+    return largest
 }
 
 console.log("Largest palindrome composed of two 3-digit numbers: " + largestPalindrome(999, 999));
