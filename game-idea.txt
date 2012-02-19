@@ -1,0 +1,19 @@
+Pokemon Battle Engine
+=====================
+
+Everyone of our generation played Pokemon and loved it. If they didn't love it,
+they're lying to themselves. If they didn't play it, they lived sad, sad
+childhoods. I think we should create a Pokemon-like battle engine. 
+
+In case you missed this fad, you basically pit two virtual monsters against each
+other in turn-based combat. The first to make the other "faint" wins. The battle
+engine would have to model a Trainer (who has many Pokemon), many Pokemon (who
+have many "moves" as well as attributes such as health), many moves (which
+potentially apply status-effects, and may target either opponent or self), and
+many status-effects (which last a variable amount of time and have various effects
+on the Pokemon affected by it).
+
+There are other online Poke-battle engines, but I couldn't find one implemented
+completely client-side. As the system is turn-based, and lends itself very
+well to multiplayer, it would be a good candidate for extension onto the server-
+side.
