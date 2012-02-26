@@ -19,3 +19,6 @@ var fib = Y(function (fibn) {
         return n <= 2 ? 1 : fibn(n - 1) + fibn(n - 2);
     };
 });
+
+console.log("fib(5): "+fib(5));
+console.log("factorial(5): "+factorial(5));

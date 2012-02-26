@@ -14,18 +14,18 @@ if (!String.hasOwnProperty("repeat")) {
 // Extended walkTheDom function:
 // Keeps track of indentation level,
 // with indentLvl defaulting to 0.
-function walkTheDom(node, func, indentLvl) {
+function walkTheDom(node, func, nestLvl) {
     "use strict";
-    if (indentLvl === undefined) {
-        indentLvl = 0;
+    if (nestLvl === undefined) {
+        nestLvl = 0;
     }
     if (node.nodeType === 1) {
-        func(node, indentLvl);
+        func(node, nestLvl);
     }
     node = node.firstChild;
 
     while (node) {
-        walkTheDom(node, func, indentLvl + 1);
+        walkTheDom(node, func, nestLvl + 1);
         node = node.nextSibling;
     }
 }
@@ -39,6 +39,49 @@ function domlog(node, indentLvl) {
     console.log(indent + node.tagName);
 }
 
+function iterToArray(iterable) {
+    "use strict";
+    var iterarray = [], i, len;
+    
+    for (i = 0, len = iterable.length; i < len; i ++) {
+        iterarray.push(iterable[i])
+    }
+
+    return iterarray;
+}
+
+function domTree(node) {
+    "use strict";
+    var children = [],
+        i, len,
+        tree = {
+            tag: node.tagName,
+            className: node.className,
+            id: node.id
+        };
+
+    for (i = 0, len = node.children.length; i < len; i++) {
+        children.push(domtree(node.children[i]));
+    }
+    tree.children = children;
+    
+    return tree;
+}
+
+tree = {a:1, b:2, c:3}
+
+tree = {}
+tree.a = 1
+tree.b = 2
+tree.c = 3
+
+
 window.onload = function () {
-    walkTheDom(document, domlog);
+    // walkTheDom(document.body, domlog);
+    window.dom = domTree(document.body.cloneNode(true));
+
+    var canv = document.createElement("canvas");
+    canv.width = 400;
+    canv.height = 400;
+    document.body.appendChild(canv);
 };
