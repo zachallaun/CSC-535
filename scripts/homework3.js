@@ -68,20 +68,8 @@ function domTree(node) {
     return tree;
 }
 
-tree = {a:1, b:2, c:3}
-
-tree = {}
-tree.a = 1
-tree.b = 2
-tree.c = 3
-
-
 window.onload = function () {
-    // walkTheDom(document.body, domlog);
-    window.dom = domTree(document.body.cloneNode(true));
-
-    var canv = document.createElement("canvas");
-    canv.width = 400;
-    canv.height = 400;
-    document.body.appendChild(canv);
+    walkTheDom(document.body, domlog);
+    // window.dom = domTree(document.body.cloneNode(true));
+    // document.body.addEventListener("mouseOver", seize);
 };
